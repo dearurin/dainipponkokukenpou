@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大日本帝国憲法 現代語訳・解説ナビ</title>
+    <meta name="description" content="大日本帝国憲法（明治憲法）の全76条と前文を現代語訳し、歴史的背景を交えて分かりやすく解説したWebサイトです。">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content=""> <!-- 公開時にサイトのURLを入力してください (例: https://example.com/) -->
+    <meta property="og:title" content="大日本帝国憲法 現代語訳・解説ナビ">
+    <meta property="og:description" content="大日本帝国憲法（明治憲法）の全76条と前文を現代語訳し、歴史的背景を交えて分かりやすく解説したWebサイトです。">
+    <meta property="og:image" content="og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content=""> <!-- 公開時にサイトのURLを入力してください (例: https://example.com/) -->
+    <meta property="twitter:title" content="大日本帝国憲法 現代語訳・解説ナビ">
+    <meta property="twitter:description" content="大日本帝国憲法（明治憲法）の全76条と前文を現代語訳し、歴史的背景を交えて分かりやすく解説したWebサイトです。">
+    <meta property="twitter:image" content="og-image.png">
+
+    <!-- Google Fonts: Noto Serif JP for classic Japanese feeling, Outfit for sleek modern UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;800&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 背景用の光彩グラデーションエフェクト -->
+    <div class="bg-glow-wrapper">
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="badge">であーる憲法解説</span>
+                <h1>大日本帝国憲法 <span class="subtitle">現代語訳・解説ナビ</span></h1>
+            </div>
+            
+            <div class="actions">
+                <button id="theme-toggle" class="theme-btn" title="テーマ切り替え">
+                    <svg class="icon sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    <svg class="icon moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="app-main">
+        
+        <!-- タブ1: 憲法リーダー -->
+        <section id="tab-reader" class="tab-content active">
+            <div class="reader-container">
+                <!-- 左サイドバー（検索・フィルター・章目次） -->
+                <aside class="reader-sidebar">
+                    <div class="sidebar-block search-block">
+                        <h3>条文検索</h3>
+                        <div class="search-input-wrapper">
+                            <input type="text" id="search-input" placeholder="キーワード、条文番号など...">
+                            <button id="search-clear-btn" class="clear-btn">&times;</button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block options-block">
+                        <h3>表示オプション</h3>
+                        <div class="option-group">
+                            <label>表示テキスト</label>
+                            <div class="segmented-control" id="view-mode-control">
+                                <button class="control-btn active" data-mode="all">すべて</button>
+                                <button class="control-btn" data-mode="trans">現代語訳</button>
+                                <button class="control-btn" data-mode="expl">解説</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block chapters-block">
+                        <h3>章別目次</h3>
+                        <ul class="chapter-list" id="chapter-list-nav">
+                            <!-- JSで挿入 -->
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- 右メイン（条文表示部） -->
+                <div class="reader-main">
+                    <!-- 前文エリア -->
+                    <div class="preamble-selector-area">
+                        <div class="preamble-header">
+                            <h2>憲法の導入部 (前文)</h2>
+                            <p>明治天皇が神霊へ告げた「告文」、国民に向けた「勅語」と「上諭」</p>
+                        </div>
+                        <div class="preamble-tabs" id="preamble-tab-headers">
+                            <!-- JSで挿入 -->
+                        </div>
+                        <div class="preamble-content-card" id="preamble-content-body">
+                            <!-- JSで挿入 -->
+                        </div>
+                    </div>
+
+                    <!-- 条文リストヘッダー -->
+                    <div class="articles-list-header">
+                        <h2 id="current-chapter-title">第一章 天皇</h2>
+                        <span class="count-badge" id="results-count">全17条</span>
+                    </div>
+
+                    <!-- 条文カードコンテナ -->
+                    <div class="articles-grid" id="articles-container">
+                        <!-- JSで挿入 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="app-footer">
+        <p>&copy; 2026 大日本帝国憲法 現代語訳・解説ナビ. パブリックドメイン資料を基に構築。</p>
+    </footer>
+
+    <!-- スクリプトの読み込み -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

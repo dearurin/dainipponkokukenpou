@@ -1,0 +1,11 @@
+# 憲法原文PDF（大容量ファイルの除外）
+大日本帝國憲法.pdf
+
+# バックアップおよび一時ファイル
+*.bak
+*.tmp
+matches_all.json
+
+# OS関連の一時ファイル
+.DS_Store
+Thumbs.db
